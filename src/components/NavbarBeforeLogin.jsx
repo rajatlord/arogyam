@@ -14,7 +14,7 @@ function NavbarBeforeLogin() {
     { name: "Contact Us", id: "contact" },
     { name: "FAQ", id: "faq" },
     { name: "About Us", id: "about" },
-    { name: "Founder", id: "founder" }, // Add this section in Landing if needed
+    { name: "Founder", id: "founder" }, // Make sure you add this section in Landing
   ];
 
   const scrollToSection = (id) => {

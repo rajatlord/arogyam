@@ -6,7 +6,8 @@ import SignUpModal from "../components/SignUpModal";
 import { useState } from "react";
 
 function Landing() {
-    const [showSignup, setShowSignup] = useState(false);
+  const [showSignup, setShowSignup] = useState(false);
+
   const features = [
     { title: "Mood Tracker", desc: "Understand and monitor your daily emotions.", img: mood },
     { title: "Guided Journaling", desc: "Daily prompts designed to heal and empower.", img: journal },
@@ -18,8 +19,9 @@ function Landing() {
       <NavbarBeforeLogin />
       <main className="px-6 py-10 text-gray-800 font-inter">
         {showSignup && <SignUpModal closeModal={() => setShowSignup(false)} />}
+
         {/* Hero Section */}
-        <section className="flex flex-col items-center justify-center text-center space-y-6 min-h-[70vh]">
+        <section id="get-started" className="flex flex-col items-center justify-center text-center space-y-6 min-h-[70vh]">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight">
             Your Mental Health <br /> Matters with <span className="text-blue-600">Arogyam</span>
           </h1>
@@ -32,15 +34,12 @@ function Landing() {
           </button>
         </section>
 
-        {/* Feature Section */}
-        <section className="mt-20 text-center space-y-10">
+        {/* Features */}
+        <section id="features" className="mt-20 text-center space-y-10">
           <h2 className="text-3xl font-semibold">Features</h2>
           <div className="grid gap-8 md:grid-cols-3">
             {features.map(({ title, desc, img }, i) => (
-              <div
-                key={i}
-                className="bg-gray-100 p-4 rounded-xl shadow hover:shadow-md transition flex flex-col items-center"
-              >
+              <div key={i} className="bg-gray-100 p-4 rounded-xl shadow hover:shadow-md transition flex flex-col items-center">
                 <img src={img} alt={`${title} icon`} className="w-45 h-45 mb-4 object-contain" />
                 <h3 className="text-xl font-semibold mb-2">{title}</h3>
                 <p className="text-sm text-gray-600">{desc}</p>
@@ -50,7 +49,7 @@ function Landing() {
         </section>
 
         {/* About Us */}
-        <section className="mt-24 max-w-4xl mx-auto text-center">
+        <section id="about" className="mt-24 max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-semibold mb-4">About Us</h2>
           <p className="text-gray-700">
             Arogyam is built with the belief that mental health is a right, not a luxury. Our mission is to create safe, accessible, and empowering spaces for every mind.
@@ -58,7 +57,7 @@ function Landing() {
         </section>
 
         {/* FAQ */}
-        <section className="mt-24 max-w-3xl mx-auto">
+        <section id="faq" className="mt-24 max-w-3xl mx-auto">
           <h2 className="text-3xl font-semibold mb-8 text-center">FAQ</h2>
           <div className="space-y-6">
             <div>
@@ -77,15 +76,20 @@ function Landing() {
         </section>
 
         {/* Contact Us */}
-        <section className="mt-24 max-w-2xl mx-auto text-center">
+        <section id="contact" className="mt-24 max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-semibold mb-4">Contact Us</h2>
           <p className="text-gray-700 mb-6">We’d love to hear from you. Reach us at:</p>
-          <a
-            href="mailto:support@arogyam.app"
-            className="text-blue-600 underline hover:text-blue-800"
-          >
+          <a href="mailto:support@arogyam.app" className="text-blue-600 underline hover:text-blue-800">
             support@arogyam.app
           </a>
+        </section>
+
+        {/* Founder (Optional) */}
+        <section id="founder" className="mt-24 max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold mb-4">Founder</h2>
+          <p className="text-gray-700">
+            Meet the passionate minds behind Arogyam. Dedicated to creating change, one mindful step at a time.
+          </p>
         </section>
 
         {/* Footer */}
